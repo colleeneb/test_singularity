@@ -4,7 +4,6 @@ From: ubuntu:18.04
     apt-get -y update
     apt-get -y install locales
     apt-get -y install fortune cowsay lolcat
-    cat /etc/*release
     apt-get -y install build-essential
     
 %environment
