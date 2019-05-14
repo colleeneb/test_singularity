@@ -6,6 +6,8 @@ From: singularityhub/ubuntu:latest
    mkdir ${SINGULARITY_ROOTFS}/mpitestapp
    cp example_codes/pi.c ${SINGULARITY_ROOTFS}/mpitestapp/
    cat /etc/*release
+   apt-get update
+   apt-get install build-essential
 %post
    # install development tools
 
