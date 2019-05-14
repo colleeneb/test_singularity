@@ -12,3 +12,4 @@ From: ubuntu:18.04
 
 %runscript
     fortune | cowsay | lolcat
+    echo "HI"
