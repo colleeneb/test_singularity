@@ -1,5 +1,5 @@
 Bootstrap: shub
-From: ubuntu
+From: singularityhub/ubuntu
 
 %setup
    # make directory for test MPI program
