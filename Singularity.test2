@@ -5,6 +5,8 @@ From: ubuntu:18.04
     apt-get -y install locales
     apt-get -y install fortune cowsay lolcat
     apt-get -y install build-essential
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
     
 %environment
     export LC_ALL=C
