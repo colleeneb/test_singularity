@@ -1,12 +1,11 @@
 Bootstrap: shub
-From: singularityhub/ubuntu
+From: singularityhub/ubuntu:latest
 
 %setup
    # make directory for test MPI program
    mkdir ${SINGULARITY_ROOTFS}/mpitestapp
    cp example_codes/pi.c ${SINGULARITY_ROOTFS}/mpitestapp/
-   lsb_release -a
-
+   cat /etc/*release
 %post
    # install development tools
    yum update -y
