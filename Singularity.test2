@@ -4,8 +4,7 @@ From: ubuntu:18.04
     apt-get -y update
     apt-get -y install fortune cowsay lolcat
     cat /etc/*release
-    apt-get update
-    apt-get install build-essential
+    apt-get -y install build-essential
     
 %environment
     export LC_ALL=C
