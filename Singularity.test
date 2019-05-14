@@ -5,12 +5,11 @@ From: singularityhub/ubuntu:latest
    # make directory for test MPI program
    mkdir ${SINGULARITY_ROOTFS}/mpitestapp
    cp example_codes/pi.c ${SINGULARITY_ROOTFS}/mpitestapp/
+%post
+   # install development tools
    cat /etc/*release
    apt-get update
    apt-get install build-essential
-%post
-   # install development tools
-
    env | sort
    cd /mpitestapp
 
