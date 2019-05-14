@@ -3,7 +3,7 @@ From: ubuntu:18.04
 %post
     apt-get -y update
     apt-get -y install fortune cowsay lolcat
-
+    cat /etc/*release
 %environment
     export LC_ALL=C
     export PATH=/usr/games:$PATH
