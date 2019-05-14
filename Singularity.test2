@@ -6,6 +6,7 @@ From: ubuntu:18.04
     cat /etc/*release
     apt-get update
     apt-get install build-essential
+    
 %environment
     export LC_ALL=C
     export PATH=/usr/games:$PATH
