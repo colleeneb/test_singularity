@@ -8,13 +8,9 @@ From: singularityhub/ubuntu:latest
    cat /etc/*release
 %post
    # install development tools
-   yum update -y
-   yum groupinstall -y "Development Tools"
-   yum install -y gcc gcc-c++ wget
 
    env | sort
    cd /mpitestapp
-   gcc -o pi pi.c
 
 %runscript
-   /mpitestapp/pi
+   echo "Hi"
