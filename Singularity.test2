@@ -3,14 +3,11 @@ From: ubuntu:18.04
 %post
     apt-get -y update
     apt-get -y install locales
-    apt-get -y install fortune cowsay lolcat
     apt-get -y install build-essential
     apt-get update
     
 %environment
     export LC_ALL=C
-    export PATH=/usr/games:$PATH
 
 %runscript
-    fortune | cowsay | lolcat
     echo "HI"
