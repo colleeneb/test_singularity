@@ -1,17 +1,13 @@
 Bootstrap: shub
-From: singularityhub/ubuntu:latest
+From: singularityhub/ubuntu:18.04
 
 %setup
    # make directory for test MPI program
    mkdir ${SINGULARITY_ROOTFS}/mpitestapp
    cp example_codes/pi.c ${SINGULARITY_ROOTFS}/mpitestapp/
+   cat /etc/*release
 %post
    # install development tools
-   cat /etc/*release
    apt-get update
    apt-get install build-essential
    env | sort
-   cd /mpitestapp
-
-%runscript
-   echo "Hi"
