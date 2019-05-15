@@ -1,13 +1,14 @@
-Bootstrap: shub
-From: singularityhub/ubuntu:18.04
-
-%setup
-   # make directory for test MPI program
-   mkdir ${SINGULARITY_ROOTFS}/mpitestapp
-   cp example_codes/pi.c ${SINGULARITY_ROOTFS}/mpitestapp/
-   cat /etc/*release
+Bootstrap: docker
+From: ubuntu:18.04
 %post
-   # install development tools
-   apt-get update
-   apt-get install build-essential
-   env | sort
+    apt-get -y update
+    apt-get -y install locales
+    apt-get -y install build-essential
+    apt-get -y install module
+    apt-get update
+    
+%environment
+    export LC_ALL=C
+
+%runscript
+    echo "HI"
