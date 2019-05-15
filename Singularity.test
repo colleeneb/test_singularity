@@ -7,7 +7,6 @@ From: ubuntu:18.04
     apt-get -y install tcl
     apt-get -y install environment-modules
     apt-get -y update
-    source $MODULESHOME/init/bash
     
 %environment
     export LC_ALL=C
@@ -15,3 +14,5 @@ From: ubuntu:18.04
 
 %runscript
     echo "HI"
+    source $MODULESHOME/init/bash
+
