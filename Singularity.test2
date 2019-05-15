@@ -4,10 +4,15 @@ From: ubuntu:18.04
     apt-get -y update
     apt-get -y install locales
     apt-get -y install build-essential
+    apt-get -y install python3 libtool autotools-dev automake autoconf
+    apt-get -y install gcc-8 gfortran-8 g++-8
+    apt-get -y install environment-modules
     apt-get update
     
 %environment
     export LC_ALL=C
+    export MODULESHOME=/usr/share/modules
 
 %runscript
     echo "HI"
+    source $MODULESHOME/init/bash
