@@ -4,8 +4,8 @@ From: ubuntu:18.04
     apt-get -y update
     apt-get -y install locales
     apt-get -y install build-essential
-    apt-get -y install module
-    apt-get update
+    apt-get -y install environment-modules
+    apt-get -y update
     
 %environment
     export LC_ALL=C
