@@ -7,11 +7,11 @@ From: ubuntu:18.04
     apt-get -y install tcl
     apt-get -y install environment-modules
     apt-get -y update
+    source $MODULESHOME/init/bash
     
 %environment
     export LC_ALL=C
     export MODULESHOME=/usr/share/modules
-    source $MODULESHOME/init/bash
 
 %runscript
     echo "HI"
