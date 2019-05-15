@@ -10,6 +10,7 @@ From: ubuntu:18.04
     apt-get -y install python3 libtool autotools-dev automake autoconf make cmake
     apt-get -y install gcc-8 gfortran-8 g++-8
     apt-get -y install vim
+    apt-get -y install strace
     apt-get update
     
 %environment
