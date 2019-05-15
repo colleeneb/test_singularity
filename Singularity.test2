@@ -6,6 +6,7 @@ From: ubuntu:18.04
     apt-get -y install build-essential
     apt-get -y install python3 libtool autotools-dev automake autoconf
     apt-get -y install gcc-8 gfortran-8 g++-8
+    apt-get -y install tcl
     apt-get -y install environment-modules
     apt-get update
     
