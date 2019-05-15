@@ -10,6 +10,7 @@ From: ubuntu:18.04
     
 %environment
     export LC_ALL=C
+    export MODULESHOME=/usr/share/modules
 
 %runscript
     echo "HI"
